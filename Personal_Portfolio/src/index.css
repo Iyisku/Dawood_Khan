@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Sora";
+    src: url("./assets/Fonts/Sora-Regular.ttf") format("truetype");
+    font-weight: 400; /* Regular */
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("./assets/Fonts/Sora-ExtraBold.ttf") format("truetype");
+    font-weight: 800; /* ExtraBold */
+}
+
+/* Tailwind Font Import */
+@import "tailwindcss";
+
+/* Custom Theme Variable */
+@theme {
+    --font-Sora: Sora, sans-serif;
+}
