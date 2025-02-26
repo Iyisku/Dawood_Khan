@@ -1,36 +1,40 @@
 import React from "react";
-import { FaGoogle, FaYoutube, FaApple } from "react-icons/fa";
+import { FaGoogle, FaMagento, FaTableTennis} from "react-icons/fa";
 
 export default function Experience() {
   const experiences = [
     {
-      role: "Lead Software Engineer at Google",
-      company: "Google",
-      icon: <FaGoogle className="text-xl text-red-500" />,
+      role: "FUll Stack Web Developer at TECHXSERVE",
+      company: "TechXServe",
+      icon: <FaTableTennis className="text-xl text-red-500" />,
       description:
-        "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
-      date: "Nov 2019 – Present",
+        "As a Full stack Web Developer at TechXServe, I played a pivotal role in developing innovative solutions. Collaborating with a team of engineers, I contributed to more than 3 Projects and Completed Clients Requirements On Schedule.",
+      date: "August 2024  – Present",
+      Techused: 'Js, TailwindCss, Node.js, React.Js, Next.js, Express.js, MongoDB, Git, Github, Visual Studio, Figma, Redis',
     },
     {
-      role: "Software Engineer at Youtube",
-      company: "YouTube",
-      icon: <FaYoutube className="text-xl text-red-500" />,
+      role: "C# Developer at Metal Heart Games Studio",
+      company: "Metal Heart Studio",
+      icon: <FaMagento className="text-xl text-red-500" />,
       description:
-        "At YouTube, I served as a Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
-      date: "Jan 2017 – Oct 2019",
+        "As a C# Developer with Unity at Metal Heart Studio, I played a pivotal role in developing Engaging Games. I contributed to more than 2 Projects and Learned Industy Best Practices In programming.",
+      date: "January 2024  – July 2024",
+      Techused: "Unity, C# , .Net,  Git, Github, Visual Studio, Figma",
     },
     {
-      role: "Junior Software Engineer at Apple",
-      company: "Apple",
-      icon: <FaApple className="text-xl text-gray-300" />,
+      role: "Intern Software Engineer at Arkaen Solutions",
+      company: "Arkaen Solutions",
+      icon: <FaMagento className="text-xl text-red-500" />,
       description:
-        "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team.",
-      date: "Jan 2016 – Dec 2017",
+        "As a Software Engineer at Arkaen Solutions, I got to learn from the very basics of programming. Collaborating with Senior Developers, I got to work with different Technologies and guidance from the best of developers.",
+      date: "July 2023 – January 2024",
+      Techused: 'Html, Css, Js, Go, Azure, C# , Git, Github, Visual Studio, Figma, Discord, Slack',
     },
+   
   ];
 
   return (
-    <section className="bg-black text-white py-16 px-6 mt-4">
+    <section className="bg-black text-white py-16 px-6 mt-12">
       {/* Title */}
       <h1 className="text-4xl text-center font-Sora font-extrabold mb-10">
         My <span className="font-bold">Experience</span>
@@ -41,7 +45,7 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="bg-[#1E1E1E] p-6 rounded-lg shadow-lg flex flex-col md:flex-row justify-between border border-gray-700"
+            className="bg-[#000] p-6 rounded-lg shadow-lg flex flex-col md:flex-row justify-between border border-white hover:bg-gray-900 hover:cursor-pointer"
           >
             {/* Left Side - Icon & Role */}
             <div className="flex items-center space-x-4">
@@ -49,6 +53,7 @@ export default function Experience() {
               <div>
                 <h2 className="text-lg font-bold">{exp.role}</h2>
                 <p className="text-gray-400 text-sm mt-2">{exp.description}</p>
+                <p className="text-gray-300 text-sm mt-2">Technologies Used: {exp.Techused}</p>    
               </div>
             </div>
 
