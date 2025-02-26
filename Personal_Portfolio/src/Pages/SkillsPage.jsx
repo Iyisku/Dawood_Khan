@@ -1,7 +1,7 @@
 import React from "react";
 import { FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress, SiMongodb, SiReact, SiTailwindcss, SiRedis, SiSocketdotio } from "react-icons/si";
+import { SiExpress, SiMongodb, SiReact, SiTailwindcss, SiRedis, SiSocketdotio, SiNextdotjs } from "react-icons/si";
 
 export default function SkillsPage() {
   const skills = [
@@ -11,12 +11,12 @@ export default function SkillsPage() {
     { name: "JavaScript", icon: <IoLogoJavascript className="text-4xl" />, highlighted: true },
     { name: "React", icon: <SiReact className="text-4xl" /> },
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-4xl" /> },
-    { name: "Redis", icon: <SiRedis className="text-4xl" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-4xl" /> },
     { name: "Socket.io", icon: <SiSocketdotio className="text-4xl" /> },
   ];
 
   return (
-    <section className="mt-20 flex flex-col items-center">
+    <section className="mt-20 flex flex-col items-center" id="skills">
       {/* Title */}
       <h1 className="font-Sora text-4xl font-extrabold text-center mb-14">
         My Skills
