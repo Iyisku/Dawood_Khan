@@ -6,6 +6,7 @@ import ProjectsPage from './Pages/ProjectsPage'
 import ContactPage from './Pages/ContactPage'
 import Header from './Components/header'
 import Experience from './Pages/experience';
+import Footer from './Components/Footer'
 
 function Layout() {
   return (
@@ -17,6 +18,7 @@ function Layout() {
    <Aboutpage/>
    <ProjectsPage/>
    <ContactPage/>
+   <Footer></Footer>
    </>
     
   )
