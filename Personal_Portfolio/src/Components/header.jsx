@@ -36,8 +36,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" >
-      <div className="m-2 text-white bg-[#000000] rounded-xl mx-4 md:mx-8 lg:mx-14 px-4 pt-1 relative" style={{ background: `rgba(0, 0, 0, ${scrollOpacity})` }} onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      <div className="m-2 text-white bg-[#000000] rounded-xl mx-4 md:mx-8 lg:mx-14 px-4 pt-1 relative" style={{ background: `rgba(0, 0, 0, ${scrollOpacity})` }}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div 

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import heropic from "../assets/Hero.png"
 
 export default function LandingPage() {
   return (
@@ -31,7 +32,7 @@ export default function LandingPage() {
       {/* Right Image */}
       <div className=" flex justify-center">
         <img
-          src="../src/assets/Banner.svg"
+          src={heropic}
           className="w-full max-[620px]: mt-20"
          
           alt="Banner"
