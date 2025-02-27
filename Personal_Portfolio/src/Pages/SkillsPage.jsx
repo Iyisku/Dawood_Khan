@@ -16,18 +16,18 @@ export default function SkillsPage() {
   ];
 
   return (
-    <section className="mt-20 flex flex-col items-center" id="skills">
+    <section className="mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8" id="skills">
       {/* Title */}
       <h1 className="font-Sora text-4xl font-extrabold text-center mb-14">
         My Skills
       </h1>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full max-w-6xl">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center p-10 border-2 border-black rounded-lg text-center 
+            className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 border-2 border-black rounded-lg text-center 
               transition-all duration-300 hover:bg-black hover:text-white cursor-pointer"
           >
             {skill.icon}
