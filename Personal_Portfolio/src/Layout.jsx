@@ -5,7 +5,7 @@ import Aboutpage from './Pages/Aboutpage'
 import ProjectsPage from './Pages/ProjectsPage'
 import ContactPage from './Pages/ContactPage'
 import Header from './Components/header'
-import Experience from './Pages/experience';
+import Experience from './Pages/Experience';
 import Footer from './Components/Footer'
 
 function Layout() {
