@@ -59,7 +59,7 @@ export default function ProjectsPage() {
     <section className="bg-black text-white py-12 px-6" id="projects">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl text-center mb-12 px-4">
-          My <span className="text-white font-bold">Projects</span>
+            <span className="text-white font-bold">Projects</span>
         </h2>
         
         <div className="space-y-16">

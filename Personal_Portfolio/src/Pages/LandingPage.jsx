@@ -12,7 +12,7 @@ export default function LandingPage() {
           Hello, I’m <span className="font-extrabold">Dawood Khan.</span>
         </h1>
         <h1 className="font-Sora text-3xl md:text-4xl mt-1">
-          <span className="font-extrabold">Full Stack</span>{" "}
+          <span className="font-extrabold">Software</span>{" "}
           <span
             className="font-extrabold relative"
             style={{
@@ -20,12 +20,12 @@ export default function LandingPage() {
               color: "white",
             }}
           >
-            Developer
+            Engineer
           </span>
         </h1>
        
         <p className="font-Sora text-zinc-500 mt-4 text-sm md:text-base">
-        Hi, I'm Dawood Khan, a passionate Full-Stack MERN Developer with a knack for quickly adapting to new technologies. With expertise in MongoDB, Express.js, React, and Node.js, I specialize in building dynamic, scalable, and high-performance web applications. My ability to swiftly grasp and implement emerging tools and frameworks allows me to stay ahead in the ever-evolving tech landscape. I thrive on solving complex challenges and delivering seamless user experiences.
+        Hi, I'm Dawood Khan, a passionate Software Engineer with a knack for quickly adapting to new technologies. With expertise in MongoDB, Express.js, React, Node.js, C# and Unity. I specialize in building dynamic, scalable, and high-performance web applications And Games. My ability to swiftly grasp and implement emerging tools and frameworks allows me to stay ahead in the ever-evolving tech landscape. I thrive on solving complex challenges and delivering seamless user experiences.
         </p>
       </div>
 

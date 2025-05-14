@@ -1,5 +1,7 @@
 import React from "react";
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs, FaPython, FaCode } from "react-icons/fa";
+import { FaUnity } from "react-icons/fa6";
+import { DiRedis } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiExpress, SiMongodb, SiReact, SiTailwindcss, SiRedis, SiSocketdotio, SiNextdotjs } from "react-icons/si";
 
@@ -13,6 +15,11 @@ export default function SkillsPage() {
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-4xl" /> },
     { name: "Next.js", icon: <SiNextdotjs className="text-4xl" /> },
     { name: "Socket.io", icon: <SiSocketdotio className="text-4xl" /> },
+    { name: "C#", icon: <FaCode className="text-4xl" /> },
+    { name: "Unity", icon: <FaUnity className="text-4xl" /> },
+    { name: "Python", icon: <FaPython className="text-4xl" /> },
+    { name: "Redis", icon: <DiRedis className="text-4xl" /> },
+    
   ];
 
   return (
