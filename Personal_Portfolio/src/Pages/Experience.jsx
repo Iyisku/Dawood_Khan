@@ -9,7 +9,7 @@ export default function Experience() {
       icon: <FaTableTennis className="text-xl group-hover:text-black text-red-500" />,
       description:
         "As a Full stack Web Developer at TechXServe, I played a pivotal role in developing innovative solutions. Collaborating with a team of engineers, I contributed to more than 3 Projects and Completed Clients Requirements On Schedule.",
-      date: "August 2024 – Present",
+      date: "July 2024 – Present",
       Techused:
         "Js, TailwindCss, Node.js, React.Js, Next.js, Express.js, MongoDB, Git, Github, Visual Studio, Figma, Redis",
     },
