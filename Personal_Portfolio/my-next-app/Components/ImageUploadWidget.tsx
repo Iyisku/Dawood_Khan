@@ -23,7 +23,6 @@ export default function ImageUploadWidget({ onUpload, value }: ImageUploadWidget
   return (
     <div className="space-y-2">
       <CldUploadWidget
-        cloudName={cloudName}
         uploadPreset="Portfolio"
         onSuccess={(result: any) => {
           const imageUrl = result.info.secure_url;
