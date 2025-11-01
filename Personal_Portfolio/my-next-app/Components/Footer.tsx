@@ -6,9 +6,7 @@ export default function Footer() {
     <footer className="bg-black text-white w-full py-4 px-6 mt-auto">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-        
-            <GiKeyboard className="text-5xl"/>
-          
+          <GiKeyboard className="text-5xl"/>
           <span className="font-medium"></span>
         </div>
         <div className="text-sm font-Sora flex-col flex gap-2 align-center">

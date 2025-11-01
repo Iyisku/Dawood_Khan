@@ -1,12 +1,12 @@
 import React from 'react';
-import aboutmeimg from '../assets/AboutMe.png'
+import aboutmeimg from '@/assets/AboutMe.png'
 
 export default function Aboutpage() {
   return (
     <div className="flex flex-col md:flex-row items-center p-6 md:p-12 bg-white text-gray-800" id='about'>
       {/* Image Section */}
       <div className="md:w-1/2 flex justify-center mb-6 md:mb-0 md:p-20">
-        <img src={aboutmeimg} alt="About Me" className="w-full h-full object-fill rounded-lg " />
+        <img src={aboutmeimg.src} alt="About Me" className="w-full h-full object-fill rounded-lg" />
       </div>
       
       {/* Text Section */}
@@ -23,7 +23,6 @@ export default function Aboutpage() {
           I'm building cutting-edge web applications using modern technologies such as
           Next.js, React.js, TailwindCSS and much more.
         </p>
-        
       </div>
     </div>
   );
