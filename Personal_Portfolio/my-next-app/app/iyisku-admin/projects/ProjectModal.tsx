@@ -16,11 +16,17 @@ export default function ProjectModal({
   onClose,
   project,
 }: ProjectModalProps) {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    title: string;
+    description: string;
+    link: string;
+    status: 'Active' | 'Completed' | 'In Progress' | 'Archived';
+    image: string;
+  }>({
     title: '',
     description: '',
     link: '',
-    status: 'Active' as const,
+    status: 'Active',
     image: '',
   });
 
@@ -35,7 +41,7 @@ export default function ProjectModal({
         title: project.title,
         description: project.description,
         link: project.link,
-        status: project.status || 'Active',
+        status: (project.status || 'Active') as 'Active' | 'Completed' | 'In Progress' | 'Archived',
         image: project.image || '',
       });
     } else {
@@ -43,7 +49,7 @@ export default function ProjectModal({
         title: '',
         description: '',
         link: '',
-        status: 'Active',
+        status: 'Active' as const,
         image: '',
       });
     }

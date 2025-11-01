@@ -108,7 +108,7 @@ export default function ProjectsPage() {
                 View
               </a>
               <button
-                onClick={() => handleDelete(project._id)}
+                onClick={() => project._id && handleDelete(project._id)}
                 disabled={deletingId === project._id}
                 className="bg-black border border-white hover:bg-red-700 text-white px-3 py-1 rounded text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
