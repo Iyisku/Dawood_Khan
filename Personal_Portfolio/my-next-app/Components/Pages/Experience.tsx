@@ -1,22 +1,13 @@
-"use client";
-
-import React from "react";
-import { FaGamepad, FaMagento, FaTableTennis } from "react-icons/fa";
+'use client';
 import { useExperiences } from "@/app/apiHooks";
-
-const getIconByCompany = (company: string) => {
-  if (company.toLowerCase().includes("techxserve")) {
-    return <FaTableTennis className="text-xl group-hover:text-black text-red-500" />;
-  } else if (company.toLowerCase().includes("metal heart")) {
-    return <FaGamepad className="text-xl group-hover:text-black text-red-500" />;
-  } else if (company.toLowerCase().includes("arkaen")) {
-    return <FaMagento className="text-xl group-hover:text-black text-red-500" />;
-  }
-  return <FaTableTennis className="text-xl group-hover:text-black text-red-500" />;
-};
+import { FaGamepad, FaMagento, FaTableTennis } from "react-icons/fa";
 
 export default function Experience() {
   const { data: experiences = [], isLoading } = useExperiences();
+  
+  // Add this for debugging
+  console.log("Experiences:", experiences);
+
   if (isLoading) {
     return (
       <section className="bg-black text-white py-16 px-6 mt-12" id="experience">
@@ -32,12 +23,10 @@ export default function Experience() {
 
   return (
     <section className="bg-black text-white py-16 px-6 mt-12" id="experience">
-      {/* Title */}
       <h1 className="text-4xl text-center font-Sora font-extrabold mb-10">
         My <span className="font-bold">Experience</span>
       </h1>
 
-      {/* Experience Cards */}
       <div className="max-w-3xl mx-auto space-y-6">
         {experiences.map((exp) => (
           <div
@@ -53,6 +42,10 @@ export default function Experience() {
               </div>
               <div>
                 <h2 className="text-lg font-bold group-hover:text-black">{exp.role}</h2>
+                {/* Add company name display for debugging */}
+                <p className="text-white font-bold text-sm mt-2 group-hover:text-black">
+                  Company: {exp.company}
+                </p>
                 <p className="text-gray-400 text-sm mt-2 group-hover:text-black">
                   {exp.description}
                 </p>
@@ -62,7 +55,6 @@ export default function Experience() {
               </div>
             </div>
 
-            {/* Right Side - Date */}
             <p className="text-gray-300 text-sm md:text-right mt-4 md:mt-0 whitespace-nowrap group-hover:text-black">
               {exp.date}
             </p>
@@ -72,3 +64,16 @@ export default function Experience() {
     </section>
   );
 }
+
+const getIconByCompany = (company: string) => {
+  const companyLower = company.toLowerCase();
+  
+  if (companyLower.includes("techxserve") || companyLower.includes("tech") || companyLower.includes("serve")) {
+    return <FaTableTennis className="text-xl group-hover:text-black text-red-500" />;
+  } else if (companyLower.includes("metal") || companyLower.includes("heart") || companyLower.includes("game")) {
+    return <FaGamepad className="text-xl group-hover:text-black text-red-500" />;
+  } else if (companyLower.includes("arkaen") || companyLower.includes("arka") || companyLower.includes("magento")) {
+    return <FaMagento className="text-xl group-hover:text-black text-red-500" />;
+  }
+  return <FaTableTennis className="text-xl group-hover:text-black text-red-500" />;
+};
