@@ -36,21 +36,7 @@ export default function LandingPage() {
           </h1>
 
           <div className="font-Sora text-zinc-500 mt-4 text-sm md:text-base whitespace-pre-line">
-            {description.split(" ").map((word, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.25,
-                  delay: i * 0.05 + 0.5,
-                  ease: "easeOut"
-                }}
-                className="inline-block mr-1"
-              >
-                {word}
-              </motion.span>
-            ))}
+            {description}
           </div>
         </div>
 
