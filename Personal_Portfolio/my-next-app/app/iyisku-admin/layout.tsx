@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { 
   FiHome,
+  FiLayout,
   FiUser, 
   FiBriefcase, 
   FiFileText, 
@@ -27,6 +28,7 @@ export default function AdminLayout({
 
   const menuItems = [
     { href: '/iyisku-admin', icon: <FiHome size={20} />, label: 'Home' },
+    { href: '/iyisku-admin/landing', icon: <FiLayout size={20} />, label: 'Landing' },
     { href: '/iyisku-admin/about', icon: <FiUser size={20} />, label: 'About' },
     { href: '/iyisku-admin/experience', icon: <FiBriefcase size={20} />, label: 'Exp' },
     { href: '/iyisku-admin/projects', icon: <FiFileText size={20} />, label: 'Projects' },

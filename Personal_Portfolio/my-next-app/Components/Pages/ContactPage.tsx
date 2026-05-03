@@ -25,7 +25,7 @@ export default function ContactPage() {
                 required
               />
             </div>
-           
+
             <div>
               <textarea
                 placeholder="How can I help?"
@@ -42,11 +42,11 @@ export default function ContactPage() {
               >
                 Get In Touch
               </button>
-            
+
               {/* LinkedIn Icon */}
-              <a 
-                href="https://www.linkedin.com/in/muhammad-dawood-k-39880b229/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/muhammad-dawood-k-39880b229/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="border border-gray-300 p-3 rounded flex items-center justify-center transition-colors duration-300 hover:bg-black hover:border-black hover:text-white"
                 aria-label="Visit my LinkedIn profile"
@@ -70,12 +70,12 @@ export default function ContactPage() {
             }}>talk</span> for <br />
             Something special
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 text-xl mb-8">
             I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.
           </p>
           <div className="space-y-2">
-            <p className="font-medium">Dawoodkhan3908@gmail.com</p>
-            <p className="font-medium">+92-320-0911015</p>
+            <p className="font-medium text-xl">Dawoodkhan3908@gmail.com</p>
+            <p className="font-medium text-xl"></p>
           </div>
         </div>
       </div>

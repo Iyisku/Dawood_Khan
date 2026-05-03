@@ -19,14 +19,15 @@ export default function SkillsPage() {
     { name: "Unity", icon: <FaUnity className="text-4xl" /> },
     { name: "Python", icon: <FaPython className="text-4xl" /> },
     { name: "Redis", icon: <DiRedis className="text-4xl" /> },
-    
+
   ];
 
   return (
-    <section className="mt-20 flex flex-col items-center px-4 sm:px-6 md:px-8" id="skills">
+    <section className="mt-20 mb-10 flex flex-col items-center px-4 sm:px-6 md:px-8" id="skills">
       {/* Title */}
-      <h1 className="font-Sora text-4xl font-extrabold text-center mb-14">
-        My Skills
+
+      <h1 className="font-Sora text-4xl  text-center mb-14">
+        My <span className="font-extrabold">Skills</span>
       </h1>
 
       {/* Skills Grid */}
@@ -34,11 +35,11 @@ export default function SkillsPage() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 border-2 border-black rounded-lg text-center 
+            className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 border-2 border-black rounded-sm text-center 
               transition-all duration-300 hover:bg-black hover:text-white cursor-pointer"
           >
             {skill.icon}
-            <p className="mt-2 font-semibold text-lg">{skill.name}</p>
+            <p className="mt-2 font-extrabold text-xl">{skill.name}</p>
           </div>
         ))}
       </div>

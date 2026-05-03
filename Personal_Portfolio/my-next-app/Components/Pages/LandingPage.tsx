@@ -1,18 +1,29 @@
+'use client';
+
 import React from "react";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import heropic from "@/assets/Hero.png"; // Changed from hero-image.png to Hero.png
+import { useLanding } from "@/app/apiHooks";
+import { motion } from "framer-motion";
 
 export default function LandingPage() {
+  const { data: landingData, isLoading } = useLanding();
+
+  // Use the fetched data, or fallback to the defaults if data is still loading or unavailable
+  const name = landingData?.name || "Dawood Khan";
+  const rolePart1 = landingData?.rolePart1 || "Software";
+  const rolePart2 = landingData?.rolePart2 || "Engineer";
+  const description = landingData?.description || "Hi, I’m a Software Engineer driven by building powerful and user-focused applications. \n I specialize in full-stack development and game development, blending creativity with performance to craft scalable, engaging experiences. I thrive on learning fast, solving real-world problems, and turning ideas into reality.";
+
   return (
     <main>
-      <div className="flex flex-col-reverse md:flex-row justify-center items-center min-h-screen px-6" id="hero">
+      <div className="flex flex-col-reverse lg:flex-row justify-center items-center min-h-screen px-6" id="hero">
         {/* Left Content */}
         <div className="flex flex-col md:w-1/2 lg:w-2/5 lg:ml-22 text-center md:text-left mt-6 md:mt-20">
           <h1 className="font-Sora text-3xl md:text-4xl">
-            Hello, I'm <span className="font-extrabold">Dawood Khan.</span>
+            Hello, I'm <span className="font-extrabold">{name}.</span>
           </h1>
           <h1 className="font-Sora text-3xl md:text-4xl mt-1">
-            <span className="font-extrabold">Software</span>{" "}
+            <span className="font-extrabold">{rolePart1}</span>{" "}
             <span
               className="font-extrabold relative"
               style={{
@@ -20,24 +31,49 @@ export default function LandingPage() {
                 color: "white",
               }}
             >
-              Engineer
+              {rolePart2}
             </span>
           </h1>
-         
-          <p className="font-Sora text-zinc-500 mt-4 text-sm md:text-base">
-            Hi, I'm Dawood Khan, a passionate Software Engineer with a knack for quickly adapting to new technologies. With expertise in MongoDB, Express.js, React, Node.js, C# and Unity. I specialize in building dynamic, scalable, and high-performance web applications And Games. My ability to swiftly grasp and implement emerging tools and frameworks allows me to stay ahead in the ever-evolving tech landscape. I thrive on solving complex challenges and delivering seamless user experiences.
-          </p>
+
+          <div className="font-Sora text-zinc-500 mt-4 text-sm md:text-base whitespace-pre-line">
+            {description.split(" ").map((word, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.25,
+                  delay: i * 0.05 + 0.5,
+                  ease: "easeOut"
+                }}
+                className="inline-block mr-1"
+              >
+                {word}
+              </motion.span>
+            ))}
+          </div>
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src={heropic.src}
-            className="w-full max-[620px]:mt-20"
-            alt="Banner"
-          />
+        <div className="flex justify-center order-1 lg:order-2">
+          <motion.div
+            animate={{
+              y: [0, -20, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <img
+              src={heropic.src}
+              className="w-full max-[620px]:mt-20"
+              alt="Banner"
+            />
+          </motion.div>
         </div>
-      </div>       
+      </div>
     </main>
   );
 }
