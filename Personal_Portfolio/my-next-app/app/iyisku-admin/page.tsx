@@ -1,6 +1,39 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+
+interface Stats {
+  totalUniqueVisitors: number;
+  totalViews: number;
+  totalProjects: number;
+  totalExperiences: number;
+}
 
 export default function AdminDashboard() {
+  const [stats, setStats] = useState<Stats>({
+    totalUniqueVisitors: 0,
+    totalViews: 0,
+    totalProjects: 0,
+    totalExperiences: 0,
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const response = await fetch('/api/stats');
+        const data = await response.json();
+        setStats(data);
+      } catch (error) {
+        console.error('Failed to fetch stats:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStats();
+  }, []);
+
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
@@ -10,7 +43,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-white font-bold text-sm">Total Projects</p>
-              <p className="text-2xl font-bold mt-1">6</p>
+              <p className="text-2xl font-bold mt-1">{loading ? '...' : stats.totalProjects}</p>
             </div>
             <span className="text-2xl">📊</span>
           </div>
@@ -20,7 +53,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-white font-bold text-sm">Experiences</p>
-              <p className="text-2xl font-bold mt-1">3</p>
+              <p className="text-2xl font-bold mt-1">{loading ? '...' : stats.totalExperiences}</p>
             </div>
             <span className="text-2xl">💼</span>
           </div>
@@ -29,18 +62,18 @@ export default function AdminDashboard() {
         <div className="bg-black rounded-lg p-6 border border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-white font-bold text-sm">Messages</p>
-              <p className="text-2xl font-bold mt-1">12</p>
+              <p className="text-white font-bold text-sm">Unique Visitors</p>
+              <p className="text-2xl font-bold mt-1">{loading ? '...' : stats.totalUniqueVisitors}</p>
             </div>
-            <span className="text-2xl">✉️</span>
+            <span className="text-2xl">👥</span>
           </div>
         </div>
         
        <div className="bg-black rounded-lg p-6 border border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-white font-bold text-sm">Site Visits</p>
-              <p className="text-2xl font-bold mt-1">1.2k</p>
+              <p className="text-white font-bold text-sm">Total Views</p>
+              <p className="text-2xl font-bold mt-1">{loading ? '...' : stats.totalViews}</p>
             </div>
             <span className="text-2xl">👁️</span>
           </div>

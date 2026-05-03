@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/lib/api/QueryProvider";
+import VisitorTracker from "@/Components/Analytics/VisitorTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} antialiased`}>
+        <VisitorTracker />
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
